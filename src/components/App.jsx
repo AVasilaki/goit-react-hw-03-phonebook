@@ -14,18 +14,18 @@ export class App extends Component {
     ],
     filter: '',
   };
-  componentDidMount() {
-    if (localStorage.length) {
-      const savedSettings = localStorage.getItem('contacts');
-      const parsedSettings = JSON.parse(savedSettings);
-      // console.log(parsedSettings);
-      this.setState({ contacts: parsedSettings });
-    }
-  }
-  componentDidUpdate() {
-    const { contacts } = this.state;
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  }
+  // componentDidMount() {
+  //   if (localStorage.length) {
+  //     const savedSettings = localStorage.getItem('contacts');
+  //     const parsedSettings = JSON.parse(savedSettings);
+  //     // console.log(parsedSettings);
+  //     this.setState({ contacts: parsedSettings });
+  //   }
+  // }
+  // componentDidUpdate() {
+  //   const { contacts } = this.state;
+  //   localStorage.setItem('contacts', JSON.stringify(contacts));
+  // }
 
   handleFilter = evt => {
     this.setState({ filter: evt.target.value });

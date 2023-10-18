@@ -15,7 +15,7 @@ export class App extends Component {
     filter: '',
   };
   componentDidMount() {
-    if (localStorage.length) {
+    if (localStorage.getItem('contacts') !== null) {
       const savedSettings = localStorage.getItem('contacts');
       const parsedSettings = JSON.parse(savedSettings);
       // console.log(parsedSettings);
